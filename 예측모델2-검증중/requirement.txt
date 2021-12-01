@@ -1,0 +1,9 @@
+keras
+keras-applications
+keras-Preprocessing
+tensorflow
+seaborn
+numpy
+pandas
+matplotlib
+scikit-learn
