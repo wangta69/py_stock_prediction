@@ -6,9 +6,12 @@ pip install mplfinance
 pip install statsmodels==0.12.2
 conda install -c conda-forge fbprophet  #  pip install fbprophet not working.   # https://daewonyoon.tistory.com/266 참조
 
+pip install pymysql
+pip install python-dotenv
 
 [error] Importing plotly failed. Interactive plots will not work.
 pip install --upgrade plotly
 
 [error] TypeError: Cannot interpret '<attribute 'dtype' of 'numpy.generic' objects>' as a data type
 pip install --upgrade pandas
+
