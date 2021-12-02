@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+from matplotlib import font_manager, rc
 import yfinance as yf
 import pandas as pd
 from fbprophet import Prophet  # https://daewonyoon.tistory.com/266
@@ -7,7 +8,7 @@ from fbprophet import Prophet  # https://daewonyoon.tistory.com/266
 # 한글폰트
 import platform
 
-from matplotlib import font_manager, rc
+
 plt.rcParams['axes.unicode_minus'] = False
 
 if platform.system() == 'Darwin':
@@ -180,7 +181,7 @@ prophet = Prophet(seasonality_mode='multiplicative',
 prophet.fit(eh_train_df)
 
 # 5일 예측
-future_data = prophet.make_future_dataframe(periods = 5, freq = 'd')
+future_data = prophet.make_future_dataframe(periods=5, freq='d')
 
 forecast_data = prophet.predict(future_data)
 pred_fbprophet_y_60 = forecast_data.yhat.values[-5:]
@@ -203,7 +204,7 @@ prophet = Prophet(seasonality_mode='multiplicative',
 prophet.fit(eh_train_df)
 
 # 5일 예측
-future_data = prophet.make_future_dataframe(periods = 5, freq = 'd')
+future_data = prophet.make_future_dataframe(periods=5, freq='d')
 
 forecast_data = prophet.predict(future_data)
 
